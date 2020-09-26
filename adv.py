@@ -65,10 +65,9 @@ def path_traversal(player):
             # add it to the visited set
             # append the new path to the queue
             if room_direction.id not in visited:
-                new_room = room_direction
                 new_path = curr_path.copy()
-                new_path.append((direction, new_room.id))
-                visited.add(new_room.id)
+                new_path.append((direction, room_direction.id))
+                visited.add(room_direction.id)
                 queue.append(new_path)
 
 # path traversal function
